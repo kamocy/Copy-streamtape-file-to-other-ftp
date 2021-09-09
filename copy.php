@@ -1,5 +1,4 @@
 <?php
-
 function ftpcopy($uftp, $pftp, $nftp, $file) {
     if($nftp == 'VO') {
         $sftp = 'ftp.voe-network.net';
@@ -8,7 +7,6 @@ function ftpcopy($uftp, $pftp, $nftp, $file) {
     } else {
         $sftp = '0';
     }
-    
     //streamtape ftp account
     $ftploc = 'ftp://streamtapeftpUser:streantapeftpPass@ftp.streamtape.com/';
     $ftpout = 'ftp://'.$uftp.':'.$pftp.'@'.$sftp.'/';
@@ -19,5 +17,5 @@ function ftpcopy($uftp, $pftp, $nftp, $file) {
     }
     return $ret;
 }
-
-//echo ftpcopy('user', 'pass', 'VO', 'file.mp4');
+//other ftp account
+echo ftpcopy('user', 'pass', 'VO', 'file.mp4');
