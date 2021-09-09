@@ -13,9 +13,9 @@ function ftpcopy($uftp, $pftp, $nftp, $file) {
     $ftploc = 'ftp://streamtapeftpUser:streantapeftpPass@ftp.streamtape.com/';
     $ftpout = 'ftp://'.$uftp.':'.$pftp.'@'.$sftp.'/';
     if(@copy($ftploc.$file, $ftpout.$file)) {
-        $ret = $file.' VO Success<br/>';
+        $ret = $file.' '.$nftp.' Success<br/>';
     } else {
-        $ret = $file.' VO Errors<br/>';
+        $ret = $file.' '.$nftp.' Errors<br/>';
     }
     return $ret;
 }
